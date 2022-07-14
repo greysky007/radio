@@ -22,24 +22,22 @@ public class Radio {
         }
     }
 
-    public void setNextNumStation(int current) {
-        if (current < maxStat && current >= minStat) {
-
-            numStation = current + 1;
-        }
-        if (current == maxStat) {
+    public void setNextNumStation() {
+        if (numStation == maxStat) {
             numStation = minStat;
-
+        } else {
+            this.numStation = numStation + 1;
         }
+
+
     }
 
 
     public void setPreviousNumStation() {
-        if (numStation > minStat) {
-            numStation = numStation - 1;
-        }
-        if (numStation == 0) {
+        if (numStation == minStat) {
             numStation = maxStat;
+        } else {
+            this.numStation = numStation - 1;
         }
     }
 

@@ -1,5 +1,11 @@
 package ru.netology.radio.task;
 
+import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Radio {
     private int numStation;
     private int currentVolume;
@@ -9,20 +15,11 @@ public class Radio {
     private int maxStat = 9;
     private int amount = 11;
 
-    public Radio() {
-    }
+
 
     public Radio(int amount) {
         this.amount = amount;
         this.maxStat = minStat + amount - 1;
-    }
-
-    public int getNumStation() {
-        return numStation;
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
     }
 
     public void setNumStation(int newNum) {
